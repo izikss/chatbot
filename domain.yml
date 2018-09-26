@@ -1,0 +1,120 @@
+slots:
+  phone_model:
+    type: text
+  phone_OS:
+    type: text
+  phone_number:
+    type: float
+
+intents:
+  - Salutations
+  - Goodbye
+  - Orange_money
+  - Internet_config
+  - Reclamation
+  - Internet_config_windows
+  - Internet_config_android
+  - Internet_config_blackberry
+  - Browsing_success
+  - Yes_affirm
+  - Not_OS
+  - Not_connected
+
+
+entities:
+  - android
+  - windows
+  - blackberry
+  - phone_number
+templates:
+  utter_salut:
+    - "salut! que puis-je faire pour vous? pas de limite de transfert d'orange money, problème avec le réseau ou pour obtenir de l'aide avec la connectivité Internet?"
+    - "salut! merci de me parler ... Quel problème voulez-vous résoudre? Orange money, paramètres de perturbation ou configuration Internet?"
+
+  utter_goodbye:
+    - "Merci, parle plus tard"
+    - "Au revoir"
+    - "Merci de me parler. à plus tard"
+
+  utter_unclear:
+    - "Désolé je n'ai pas compris cela, pouvez-vous s'il vous plaît dire cela d'une manière plus compréhensible afin que je puisse comprendre vos intentions"
+    - "S'il te plaît dis-le encore, je pense que je ne t'ai pas eu. Vous pouvez dire cela d'une manière facile à comprendre"
+
+
+  utter_ask_phone_number:
+    - "Donne moi ton numéro s'il-te-plaît"
+    - "votre numéro de téléphone s'il vous plaît"
+
+  utter_ask_phone_OS:
+    - "Quel est le système d'exploitation de votre téléphone?"
+    - "Le système d'exploitation de votre téléphone s'il vous plaît"
+
+  utter_phone_model:
+    - "Quel est le nom de votre téléphone?"
+
+  utter_confirm_android:
+    - "est-il correct que vous utilisiez le système d'exploitation Android?"
+
+  utter_confirm_windows:
+    - "est-il correct que vous utilisiez le système d'exploitation windows?"
+
+  utter_confirm_blackberry:
+    - "est-il correct que vous utilisiez le système d'exploitation blackberry?"
+
+  utter_settings_android:
+    - "Pour configurer votre Smarphone android avec les paramètres de connexion d'Orange Sénégal il faut :
+      - Aller dans le menu Réglages ou Paramètres -> Sélectionner Réseaux mobiles -> Cliquer sur Noms des points d'accès et créer un nouvel APN.
+        Les paramètres internet sont les suivants :
+
+        Nom : Orange Internet
+        APN : internet
+        Une fois les paramètres saisis, enregistrez et activez votre nouveau profil internet."
+
+  utter_settings_blackberry:
+    - "Pour configurer votre Smarphone Blackberry avec les paramètres de connexion d'Orange Sénégal il faut :
+      -  Aller dans le menu Réglages ou Paramètres -> les connexions de Réseau -> Réseau mobile -> Ajouter un nouvel APN
+       Les paramètres internet sont les suivants :
+
+       Nom : Orange Internet
+       APN : internet
+       Une fois les paramètres saisis, enregistrez et activez votre nouveau profil internet."
+
+
+  utter_settings_windows:
+    - "Pour configurer votre Smarphone windows avec les paramètres de connexion d'Orange Sénégal il faut :
+      -  Aller dans le menu Réglages ou Paramètres -> Resaux et sans fil -> Reseau cellulaire et SIM -> Parameter SIM -> Ajouter un nouvel APN
+       Les paramètres internet sont les suivants :
+
+       Nom : Orange Internet
+       APN : internet
+       Une fois les paramètres saisis, enregistrez et activez votre nouveau profil internet."
+
+  utter_success_config:
+    - "Je suis heureux de pouvoir vous aider et vous pouvez maintenant naviguer sur votre smartphone. Profitez du réseau Orange"
+
+  utter_not_connected:
+    - "Si vous êtes certain d'avoir suivi la procédure ci-dessus et que vous n'avez toujours pas de connexion ou que vous n'êtes pas connecté, je vous recommanderai de parler à un agent humain car votre téléphone pourrait avoir d'autres problèmes que mes capacités. Je vous remercie"
+
+  utter_not_OS:
+    - "S'il vous plaît quel est le système d'exploitation de votre téléphone, Windows, Android ou Blackberry?
+      Si vous n'êtes pas sûr du système d'exploitation du téléphone, vous pouvez simplement mentionner le nom du téléphone."
+
+
+
+actions:
+  - utter_salut
+  - utter_goodbye
+  - utter_ask_phone_number
+  - utter_ask_phone_OS
+  - utter_phone_model
+  - utter_confirm_android
+  - utter_confirm_windows
+  - utter_confirm_blackberry
+  - utter_settings_android
+  - utter_settings_windows
+  - utter_settings_blackberry
+  - utter_success_config
+  - utter_not_OS
+  - utter_unclear
+  - utter_not_connected
+  - actions.Form

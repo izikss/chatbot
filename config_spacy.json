@@ -1,0 +1,9 @@
+{
+  "language":"fr",
+  "pipeline":"tensorflow_embedding",
+   "name": "intent_classifier_tensorflow_embedding",
+   "name": "ner_synonyms",
+   "name": "intent_featurizer_count_vectors",
+  "path":"./models/nlu",
+  "data":"./data/data.md"
+}
